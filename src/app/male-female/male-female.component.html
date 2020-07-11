@@ -1,0 +1,22 @@
+<br>
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn-primary" style="margin-right:0%;" routerLink="/home">back</button>
+   </div>
+</div>
+<div class="container" style="background-color: black;">
+  <h2 style="text-align: center;color: chocolate;">COVID-19 Male:Female comparison</h2>
+<div style="display: block;">
+  <div class="chart-wrapper"  *ngIf="pieChartLabels && pieChartData">
+    <canvas baseChart 
+      [data]="pieChartData" 
+      [labels]="pieChartLabels" 
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend"
+      [colors]="pieChartColors">
+    </canvas>
+  </div>
+  </div>
+</div>

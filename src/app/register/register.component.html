@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0" >
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">SIGN UP!</h1>
+                        </div>
+                        <form #userRegistrationForm="ngForm" (ngSubmit)="OnSubmit(userRegistrationForm)">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <label data-error="required field">First Name</label>
+                                    <input class="validate" type="text" name="firstName" #firstName="ngModel" [(ngModel)]="user.firstName" class="form-control form-control-user" id="exampleFirstName"
+                                     placeholder="First Name" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label data-error="required field">Last Name</label>
+                                    <input  type="text" name="lastName" #lastName="ngModel" [(ngModel)]="user.lastName" class="form-control form-control-user" id="exampleLastName"
+                                    placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label data-error="required field">Email</label>
+                                <input class="validate" type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control form-control-user" id="exampleInputEmail"
+                                 placeholder="Email Address" [pattern]="emailPattern" required>
+                            </div>
+                            <div class="form-group row">
+                                <label data-error="required field">Password</label>
+                                    <input class="validate" type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control form-control-user"
+                                     id="exampleInputPassword" placeholder="Password" required>
+                            </div>
+                            <button [disabled]="!userRegistrationForm.valid" class="btn-large btn-primary-link" routerLink="/register">
+                                Register Account
+                            </button>
+                        </form>
+                        <div class="text-center">
+                            <a class="small" routerLink="/login">Already have an account? Login!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

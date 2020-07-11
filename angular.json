@@ -24,6 +24,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "covidDataDisplay"
+    }
+  },
+  "defaultProject": "covidDataDisplay",
+  "cli": {
+    "analytics": "1b7ce04c-ed70-4732-b695-9ca3552280f1"
+  }
 }

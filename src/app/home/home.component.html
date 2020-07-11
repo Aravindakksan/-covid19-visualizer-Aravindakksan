@@ -1,0 +1,54 @@
+<br>
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn-danger" style="margin-right:0%;" (click)="logout()">Logout</button>
+    <hr>
+    <div class="col text-right">
+      <div ngbDropdown placement="top-right" class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Covid-Chart</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+          <button ngbDropdownItem routerLink="/male-female">Male:Female Ratio</button>
+          <button ngbDropdownItem routerLink="/age">ageBracket</button>
+          <button ngbDropdownItem routerLink="/bar">state comparison</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+<!--COVID STATUS-->
+
+<div class="container" style="background-color: black;">
+  <h2 style="text-align: center;color: chocolate;">COVID-19 STATUS IN INDIA</h2><br>
+  <div class="card-deck">
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Confirmed</div>
+      <div class="card-body">
+        <h5 class="card-title">{{confirmed}}</h5>
+      </div>
+    </div>
+    <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+      <div class="card-header">Recovered</div>
+      <div class="card-body">
+        <h5 class="card-title">{{recovered}}</h5>
+      </div>
+    </div>
+    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">Active</div>
+      <div class="card-body">
+        <h5 class="card-title">{{active}}</h5>
+      </div>
+    </div>
+    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+      <div class="card-header">Deaths</div>
+      <div class="card-body">
+        <h5 class="card-title">{{deaths}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--STATEWISE COMPARISON-->
+<app-chart></app-chart>
